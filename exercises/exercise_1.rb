@@ -12,13 +12,13 @@ s1 = Store.create(name: 'Burnaby',
   womens_apparel: true)
 
 #---------- STORE 2 ------------
-s1 = Store.create(name: 'Richmond', 
+s2 = Store.create(name: 'Richmond', 
   annual_revenue: 1260000, 
   mens_apparel: false, 
   womens_apparel: true)
 
 #---------- STORE 3 ------------
-s1 = Store.create(name: 'Gastown', 
+s3 = Store.create(name: 'Gastown', 
   annual_revenue: 190000, 
   mens_apparel: true, 
   womens_apparel: false)
