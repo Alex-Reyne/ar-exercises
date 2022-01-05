@@ -11,16 +11,21 @@ puts "----------"
 
 # Your code goes here ...
 
-class Employee < ApplicationRecord
-  validates :first_name, :last_name, presence: true
-  validates :hourly_rate, comparison: { greater_than: 39 }
-  validates :hourly_rate, comparison: { less_than: 201 }
-  validates :store, presence: true
-end
+# class Employee < ApplicationRecord
+#   validates :first_name, :last_name, presence: true
+#   validates :hourly_rate, comparison: { greater_than: 39 }
+#   validates :hourly_rate, comparison: { less_than: 201 }
+#   validates :store, presence: true
+# end
 
-class Store < ApplicationRecord
-  validates :name, presence: true, length: { minimum: 3 }
-  validates :annual_revenue, presence: true, :only_integer: true, comparison: { greater_than: 0 }
-  validates :hourly_rate, comparison: { less_than: 201 }
-  validates :store, presence: true
-end
+# class Store < ApplicationRecord
+#   validates :name, presence: true, length: { minimum: 3 }
+#   validates :annual_revenue, presence: true, only_integer: true, comparison: { greater_than: 0 }
+#   validates :hourly_rate, comparison: { less_than: 201 }
+#   validates :store, presence: true
+# end
+
+puts 'Enter Store Name:'
+store_name = gets.chomp
+
+pp Store.create(name: store_name).errors.full_messages
